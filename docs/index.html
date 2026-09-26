@@ -266,7 +266,7 @@
   }
   footer .f-brand{font-family:var(--font-pixel);font-size:9px;letter-spacing:1px}
   footer .legal{flex-basis:100%;font-size:12.5px;color:var(--muted);opacity:.75;margin-top:4px}
-  footer nav{display:flex;gap:22px}
+  footer nav{display:flex;gap:22px;flex-wrap:wrap}
   footer a{color:var(--muted);text-decoration:none}
   footer a:hover{color:var(--text)}
 
@@ -456,6 +456,7 @@
     <nav>
       <a href="https://github.com/ylimecc/Bisory/releases" rel="noopener" data-i18n="ft1">Todas las versiones</a>
       <a href="https://github.com/ylimecc/Bisory/issues" rel="noopener" data-i18n="ft3">Reportar un problema</a>
+      <a href="privacidad.html" data-i18n="ft4">Privacidad</a>
     </nav>
     <p class="legal" data-i18n="legal">Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.</p>
   </footer>
@@ -495,7 +496,7 @@ const STRINGS = {
     a4:'Por defecto en tu carpeta de <strong>Descargas</strong>. Puedes elegir otra carpeta en Ajustes → «Elegir carpeta de guardado».',
     q5:"¿Tiene retraso (lag)?",
     a5:'El retraso depende de la capturadora, no del visor. Con una MS2130 es de unas décimas de segundo: perfecto para jugar casual, RPGs o plataformas. Para juegos de pelea competitivos, juega mirando la TV y usa el visor para grabar.',
-    ft1:"Todas las versiones", ft3:"Reportar un problema",
+    ft1:"Todas las versiones", ft3:"Reportar un problema", ft4:"Privacidad",
     legal:"Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.",
     title:"Bisory: Visor de capturadora para PC"
   },
@@ -530,7 +531,7 @@ const STRINGS = {
     a4:'In your <strong>Downloads</strong> folder by default. You can pick another folder in Settings → “Choose save folder”.',
     q5:"Is there any lag?",
     a5:'Latency comes from the capture card, not the viewer. With an MS2130 it\'s a few tenths of a second: great for casual play, RPGs or platformers. For competitive fighting games, play on the TV and use the viewer to record.',
-    ft1:"All releases", ft3:"Report an issue",
+    ft1:"All releases", ft3:"Report an issue", ft4:"Privacy",
     legal:"Bisory is not affiliated with Nintendo, Sony or Microsoft. Console names are trademarks of their respective owners and are mentioned solely to indicate compatibility.",
     title:"Bisory: Capture card viewer for PC"
   }

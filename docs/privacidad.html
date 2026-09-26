@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad · Bisory</title>
+<meta name="description" content="Política de privacidad de Bisory: funciona sin internet y no envía datos a nadie. Privacy policy: Bisory works offline and sends data to no one.">
+<meta name="theme-color" content="#0A0C12">
+<link rel="icon" href="icon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  /* mismos tokens que index.html */
+  :root{
+    --bg:#0A0C12;
+    --surface:#12151D;
+    --surface-2:#181C27;
+    --border:#232936;
+    --text:#EAF0F7;
+    --muted:#93A0B4;
+    --blue:#0AB9E6;
+    --red:#FF3C28;
+    --radius:14px;
+    --font-display:"Chakra Petch",system-ui,sans-serif;
+    --font-pixel:"Press Start 2P",monospace;
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--blue);color:#03222c}
+  a{color:var(--blue);text-underline-offset:3px}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+
+  /* el texto está en los dos idiomas; el lang de <html> decide cuál se ve (sin JS: español) */
+  html[lang="es"] [lang="en"], html[lang="en"] [lang="es"]{display:none}
+
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+
+  /* ---------- top bar (igual que la portada) ---------- */
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 0;
+  }
+  .brand{
+    font-family:var(--font-pixel);font-size:11px;letter-spacing:1px;
+    color:var(--text);text-decoration:none;display:flex;align-items:center;gap:10px;
+  }
+  .brand .dot-l{width:10px;height:10px;border-radius:50%;background:var(--blue)}
+  .brand .dot-r{width:10px;height:10px;border-radius:50%;background:var(--red)}
+  .top-actions{display:flex;align-items:center;gap:10px}
+  .lang-btn,.gh-link{
+    font-family:var(--font-display);font-weight:600;font-size:14px;
+    color:var(--muted);background:none;border:1px solid var(--border);
+    border-radius:8px;padding:7px 14px;cursor:pointer;text-decoration:none;
+    transition:color .2s,border-color .2s;
+  }
+  .lang-btn:hover,.gh-link:hover{color:var(--text);border-color:var(--muted)}
+
+  /* ---------- política ---------- */
+  main{max-width:720px;margin:0 auto;padding:32px 0 72px}
+  .eyebrow{
+    font-family:var(--font-pixel);font-size:10px;color:var(--muted);
+    letter-spacing:2px;display:block;margin-bottom:22px;
+  }
+  .eyebrow .b{color:var(--blue)} .eyebrow .r{color:var(--red)}
+  h1{
+    font-family:var(--font-display);font-weight:700;
+    font-size:clamp(30px,5vw,42px);line-height:1.15;text-wrap:balance;
+  }
+  .updated{color:var(--muted);font-size:14px;margin-top:8px}
+
+  .tldr{
+    margin:28px 0 8px;padding:20px 22px;
+    background:var(--surface);border:1px solid rgba(10,185,230,.45);border-radius:var(--radius);
+    box-shadow:0 0 60px -24px rgba(10,185,230,.5);
+  }
+  .tldr p{color:var(--text);font-size:16.5px;margin:0}
+  .tldr strong{font-family:var(--font-display);color:var(--blue)}
+
+  h2{font-family:var(--font-display);font-weight:600;font-size:21px;margin:44px 0 12px}
+  article p{color:var(--muted);margin-bottom:12px}
+  article strong{color:var(--text);font-weight:600}
+  article ul{list-style:none;display:grid;gap:10px;margin-bottom:12px}
+  article li{color:var(--muted);padding-left:22px;position:relative}
+  /* viñetas de píxel, azul y rojo como los dots de la marca */
+  article li::before{
+    content:"";position:absolute;left:2px;top:.62em;
+    width:8px;height:8px;background:var(--blue);
+  }
+  article li:nth-child(even)::before{background:var(--red)}
+  code{
+    font-family:var(--font-display);background:var(--surface-2);
+    padding:1px 7px;border-radius:5px;font-size:14px;color:var(--text);
+  }
+  kbd{
+    font-family:var(--font-display);font-size:13px;font-weight:600;
+    background:var(--surface-2);border:1px solid var(--border);
+    border-bottom-width:2px;border-radius:5px;padding:0 6px;
+    color:var(--text);white-space:nowrap;
+  }
+
+  /* ---------- footer (igual que la portada) ---------- */
+  footer{
+    border-top:1px solid var(--border);padding:34px 0 46px;
+    display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+    color:var(--muted);font-size:14px;
+  }
+  footer .f-brand{font-family:var(--font-pixel);font-size:9px;letter-spacing:1px}
+  footer nav{display:flex;gap:22px;flex-wrap:wrap}
+  footer a{color:var(--muted);text-decoration:none}
+  footer a:hover{color:var(--text)}
+
+  @media (max-width:480px){
+    .wrap{padding:0 18px}
+    main{padding-top:16px}
+    .tldr{padding:16px 18px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a class="brand" href="./"><span class="dot-l"></span>BISORY<span class="dot-r"></span></a>
+    <div class="top-actions">
+      <a class="gh-link" href="https://github.com/ylimecc/Bisory" rel="noopener">GitHub</a>
+      <button class="lang-btn" id="langBtn" aria-label="Switch language">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= ESPAÑOL ================= -->
+    <article lang="es">
+      <span class="eyebrow"><span class="b">PLAYER 1</span> · PRIVACIDAD · <span class="r">OFFLINE</span></span>
+      <h1>Política de privacidad</h1>
+      <p class="updated">Última actualización: 25 de septiembre de 2026</p>
+
+      <div class="tldr">
+        <p><strong>Lo corto:</strong> Bisory funciona sin internet. No tiene cuentas, anuncios ni analíticas, y no envía datos a nadie. Todo lo que muestra, graba y guarda se queda en tu PC.</p>
+      </div>
+
+      <h2>Qué usa Bisory y para qué</h2>
+      <ul>
+        <li><strong>Cámara y micrófono.</strong> Windows presenta la capturadora USB como una cámara y un micrófono. Bisory abre solo el dispositivo que detecta como capturadora, o el que eliges en Ajustes, para mostrar y grabar la señal de tu consola.</li>
+        <li><strong>Tu pantalla y el sonido del sistema.</strong> Solo cuando usas «Grabar mi PC» y eliges una pantalla o una ventana. Las miniaturas del selector se crean en ese momento y no se guardan.</li>
+        <li><strong>Atajos de teclado.</strong> Bisory le pide a Windows solo tres combinaciones: <kbd>F12</kbd>, <kbd>Ctrl + F12</kbd> y <kbd>Ctrl + F11</kbd>. No lee ni guarda ninguna otra tecla.</li>
+      </ul>
+
+      <h2>Qué se guarda y dónde</h2>
+      <ul>
+        <li><strong>Capturas y clips:</strong> en tu carpeta de Descargas o en la que elijas. Son archivos tuyos; Bisory no los sube a ningún lado.</li>
+        <li><strong>Replay:</strong> los últimos 60 segundos viven solo en la memoria mientras Bisory está abierto. Si no los guardas, se descartan.</li>
+        <li><strong>Ajustes:</strong> tus preferencias (tema, volumen, calidad, carpeta de guardado y dispositivos elegidos) se guardan en tu PC, dentro de tu usuario de Windows. Si instalaste Bisory desde Microsoft Store, desinstalarlo los borra. Con el instalador o la versión portable, bórralos eliminando la carpeta <code>%APPDATA%\Bisory</code>.</li>
+      </ul>
+
+      <h2>Lo que Bisory no hace</h2>
+      <ul>
+        <li>No se conecta a internet.</li>
+        <li>No pide cuentas ni registros.</li>
+        <li>No muestra anuncios.</li>
+        <li>No incluye analíticas, rastreadores ni reportes de errores automáticos.</li>
+        <li>No vende ni comparte datos, porque no los tiene.</li>
+      </ul>
+
+      <h2>Si lo instalas desde Microsoft Store</h2>
+      <p>Microsoft gestiona la descarga y las actualizaciones según su <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">declaración de privacidad</a>. Microsoft puede mostrarle al desarrollador estadísticas generales, como cuántas personas descargan la app o cuántas veces falla. Bisory nunca recibe tu nombre, tu correo ni tu cuenta.</p>
+
+      <h2>Este sitio web</h2>
+      <ul>
+        <li>Está alojado en GitHub Pages y las descargas salen de GitHub. GitHub puede registrar datos técnicos, como tu dirección IP, según su <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">declaración de privacidad</a>.</li>
+        <li>Las fuentes tipográficas se cargan desde Google Fonts, que recibe tu dirección IP al descargarlas (<a href="https://policies.google.com/privacy" rel="noopener">política de Google</a>).</li>
+        <li>El sitio no usa cookies ni analíticas. Tu navegador guarda el idioma que eliges, tu récord en el juego de la página de error y una copia de esa página para verla sin conexión.</li>
+      </ul>
+
+      <h2>Cambios y contacto</h2>
+      <p>Si esta política cambia, la nueva versión aparecerá en esta página con su fecha.</p>
+      <p>¿Dudas? Abre un reporte en <a href="https://github.com/ylimecc/Bisory/issues" rel="noopener">GitHub</a>. Los reportes son públicos, así que no incluyas datos personales. Bisory es desarrollado por Ylimec.</p>
+    </article>
+
+    <!-- ================= ENGLISH ================= -->
+    <article lang="en">
+      <span class="eyebrow"><span class="b">PLAYER 1</span> · PRIVACY · <span class="r">OFFLINE</span></span>
+      <h1>Privacy policy</h1>
+      <p class="updated">Last updated: September 25, 2026</p>
+
+      <div class="tldr">
+        <p><strong>The short version:</strong> Bisory works without internet. It has no accounts, ads or analytics, and it sends data to no one. Everything it shows, records and saves stays on your PC.</p>
+      </div>
+
+      <h2>What Bisory uses and why</h2>
+      <ul>
+        <li><strong>Camera and microphone.</strong> Windows presents a USB capture card as a camera and a microphone. Bisory only opens the device it detects as your capture card, or the one you pick in Settings, to show and record your console's signal.</li>
+        <li><strong>Your screen and system audio.</strong> Only when you use “Record my PC” and pick a screen or a window. The picker's thumbnails are made on the spot and never saved.</li>
+        <li><strong>Keyboard shortcuts.</strong> Bisory asks Windows for three combinations only: <kbd>F12</kbd>, <kbd>Ctrl + F12</kbd> and <kbd>Ctrl + F11</kbd>. It doesn't read or store any other key.</li>
+      </ul>
+
+      <h2>What is saved and where</h2>
+      <ul>
+        <li><strong>Screenshots and clips:</strong> in your Downloads folder or the one you choose. They're your files; Bisory doesn't upload them anywhere.</li>
+        <li><strong>Replay:</strong> the last 60 seconds live only in memory while Bisory is open. If you don't save them, they're discarded.</li>
+        <li><strong>Settings:</strong> your preferences (theme, volume, quality, save folder and chosen devices) are stored on your PC, inside your Windows user profile. If you installed Bisory from the Microsoft Store, uninstalling it erases them. With the installer or the portable version, erase them by deleting the <code>%APPDATA%\Bisory</code> folder.</li>
+      </ul>
+
+      <h2>What Bisory doesn't do</h2>
+      <ul>
+        <li>It doesn't connect to the internet.</li>
+        <li>It doesn't ask for accounts or sign-ups.</li>
+        <li>It doesn't show ads.</li>
+        <li>It includes no analytics, trackers or automatic error reports.</li>
+        <li>It doesn't sell or share data, because it has none.</li>
+      </ul>
+
+      <h2>If you install it from the Microsoft Store</h2>
+      <p>Microsoft handles the download and updates under its <a href="https://privacy.microsoft.com/privacystatement" rel="noopener">privacy statement</a>. Microsoft may show the developer general statistics, like how many people download the app or how often it crashes. Bisory never receives your name, email or account.</p>
+
+      <h2>This website</h2>
+      <ul>
+        <li>It's hosted on GitHub Pages, and downloads come from GitHub. GitHub may log technical data such as your IP address, under its <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">privacy statement</a>.</li>
+        <li>Fonts load from Google Fonts, which receives your IP address when serving them (<a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>).</li>
+        <li>The site uses no cookies or analytics. Your browser stores the language you pick, your high score in the error page's game, and a copy of that page to show it offline.</li>
+      </ul>
+
+      <h2>Changes and contact</h2>
+      <p>If this policy changes, the new version will appear on this page with its date.</p>
+      <p>Questions? Open an issue on <a href="https://github.com/ylimecc/Bisory/issues" rel="noopener">GitHub</a>. Issues are public, so leave out personal data. Bisory is made by Ylimec.</p>
+    </article>
+  </main>
+
+  <footer>
+    <span class="f-brand">BISORY · 2026</span>
+    <nav>
+      <a href="./"><span lang="es">Inicio</span><span lang="en">Home</span></a>
+      <a href="https://github.com/ylimecc/Bisory/releases" rel="noopener"><span lang="es">Todas las versiones</span><span lang="en">All releases</span></a>
+      <a href="https://github.com/ylimecc/Bisory/issues" rel="noopener"><span lang="es">Reportar un problema</span><span lang="en">Report an issue</span></a>
+    </nav>
+    <span>© 2026 Ylimec</span>
+  </footer>
+</div>
+
+<script>
+/* mismo idioma que la portada: lo elegido ahí (vs-lang) o el del navegador */
+const TITLES = { es:"Privacidad · Bisory", en:"Privacy · Bisory" };
+const langBtn = document.getElementById("langBtn");
+let lang = "es";
+try { lang = localStorage.getItem("vs-lang") || (navigator.language||"es").slice(0,2); } catch(e){}
+if (lang !== "en") lang = "es";
+
+function apply(){
+  document.documentElement.lang = lang;
+  document.title = TITLES[lang];
+  langBtn.textContent = lang === "es" ? "EN" : "ES";
+}
+langBtn.addEventListener("click", ()=>{
+  lang = lang === "es" ? "en" : "es";
+  try { localStorage.setItem("vs-lang", lang); } catch(e){}
+  apply();
+});
+apply();
+
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
+</script>
+</body>
+</html>
