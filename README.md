@@ -20,7 +20,8 @@ Bisory es una aplicación ligera diseñada para jugar tus consolas favoritas (co
 ## Requisitos / Requirements
 
 - Windows 10 / 11
-- Capturadora USB HDMI (probado con chip MS2130 a 1080p 60 fps) / USB HDMI capture card (tested with MS2130 chip at 1080p 60 fps)
+- Para consolas: capturadora USB HDMI (probado con chip MS2130 a 1080p 60 fps) / For consoles: USB HDMI capture card (tested with MS2130 chip at 1080p 60 fps)
+- Para grabar tu PC no hace falta capturadora / Recording your PC needs no capture card
 
 ## Nota / Note
 
