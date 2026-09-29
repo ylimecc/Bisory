@@ -10,10 +10,11 @@ Bisory es una aplicación ligera diseñada para jugar tus consolas favoritas (co
 
 ## ⬇ Descargar / Download
 
-**[ylimecc.github.io/Bisory](https://ylimecc.github.io/Bisory/)** · [Releases](https://github.com/ylimecc/Bisory/releases)
+**[Microsoft Store](https://apps.microsoft.com/detail/9PN1XST1QHBF)** (recomendado / recommended) · **[ylimecc.github.io/Bisory](https://ylimecc.github.io/Bisory/)** · [Releases](https://github.com/ylimecc/Bisory/releases)
 
 | | |
 |---|---|
+| Microsoft Store | Se actualiza solo, sin aviso de SmartScreen / Updates itself, no SmartScreen warning |
 | `Bisory-Setup-*.exe` | Instalador / Installer |
 | `Bisory-Portable-*.exe` | Portable, sin instalación / no install |
 
@@ -25,9 +26,9 @@ Bisory es una aplicación ligera diseñada para jugar tus consolas favoritas (co
 
 ## Nota / Note
 
-Si Windows SmartScreen muestra un aviso al abrirlo: **Más información → Ejecutar de todas formas**. Aparece porque el ejecutable no está firmado digitalmente.
+Si Windows SmartScreen muestra un aviso al abrirlo: **Más información → Ejecutar de todas formas**. Aparece porque el ejecutable no está firmado digitalmente. La versión de Microsoft Store no muestra ese aviso.
 
-If Windows SmartScreen shows a warning: **More info → Run anyway**. It appears because the executable is not code-signed.
+If Windows SmartScreen shows a warning: **More info → Run anyway**. It appears because the executable is not code-signed. The Microsoft Store version doesn't show it.
 
 ---
 
