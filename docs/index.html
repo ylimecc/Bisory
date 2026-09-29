@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bisory: tu consola en tu monitor</title>
-<meta name="description" content="Bisory: visor de capturadora para Windows. Juega tu consola en el monitor de tu PC con cualquier capturadora USB, guarda los últimos 60 segundos con una tecla y graba tus juegos de PC. Gratis en Microsoft Store.">
+<meta name="description" content="Bisory es un visor de capturadora gratuito para Windows. Juega tu consola en el monitor de tu computadora, guarda el último minuto de juego con una tecla y graba tus partidas de PC. Disponible en Microsoft Store.">
 <meta name="theme-color" content="#0B0E14">
 <link rel="icon" href="icon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -190,8 +190,9 @@
   .sec-head p strong{color:var(--text);font-weight:500}
 
   /* cómo se conecta: el cable de verdad, no tres tarjetas */
-  .chain{display:grid;grid-template-columns:auto 1fr auto 1fr auto;align-items:center;gap:0 18px}
-  .node{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;width:150px}
+  /* arriba y no al centro: si un nombre ocupa dos líneas, los íconos siguen alineados */
+  .chain{display:grid;grid-template-columns:auto 1fr auto 1fr auto;align-items:start;gap:0 18px}
+  .node{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;width:160px}
   .node .ico{
     width:76px;height:76px;border-radius:var(--r-lg);display:grid;place-items:center;
     background:var(--panel);border:1px solid var(--line);color:var(--text);
@@ -199,7 +200,7 @@
   .node.me .ico{border-color:rgba(51,181,217,.55);color:var(--blue)}
   .node .ico svg{width:34px;height:34px}
   .node span{font-size:15px;font-weight:500}
-  .link{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--line-2) 0 8px,transparent 8px 14px);margin-bottom:34px}
+  .link{position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--line-2) 0 8px,transparent 8px 14px);margin-top:37px}
   .link b{
     position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
     font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.06em;
@@ -341,17 +342,17 @@
     <div class="hero-copy">
       <p class="eyebrow" data-i18n="eyebrow">Para Windows · Gratis</p>
       <h1 data-i18n="h1">Tu consola,<br><em>en tu monitor.</em></h1>
-      <p class="lead" data-i18n="lead">Conecta una capturadora USB y juega Switch, PlayStation o Xbox en tu PC. Sin OBS y sin configurar nada. Si pasa algo épico, <kbd>Ctrl</kbd>+<kbd>F12</kbd> guarda <strong>los últimos 60 segundos</strong>.</p>
+      <p class="lead" data-i18n="lead">Juega Nintendo Switch, PlayStation o Xbox en el monitor de tu computadora con una capturadora USB. Bisory está listo en cuanto lo abres, sin programas adicionales. Y si ocurre una gran jugada, <kbd>Ctrl</kbd>+<kbd>F12</kbd> guarda <strong>el último minuto de juego</strong>.</p>
       <a class="cta" href="https://apps.microsoft.com/detail/9PN1XST1QHBF" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span><span class="t" data-i18n="cta">Descargar en Microsoft Store</span><span class="s" data-i18n="ctas">Gratis · se actualiza solo</span></span>
+        <span><span class="t" data-i18n="cta">Descargar en Microsoft Store</span><span class="s" data-i18n="ctas">Gratis · con actualizaciones automáticas</span></span>
       </a>
       <p class="alt-dl">
         <span data-i18n="alt">Otras descargas:</span>
-        <a href="https://github.com/ylimecc/Bisory/releases/download/v1.7.2/Bisory-Setup-1.7.2.exe" title="Bisory-Setup-1.7.2.exe · 72 MB" data-i18n="dl1">instalador</a><span class="sep">·</span><a href="https://github.com/ylimecc/Bisory/releases/download/v1.7.2/Bisory-Portable-1.7.2.exe" title="Bisory-Portable-1.7.2.exe · 72 MB" data-i18n="dl2">portable</a><span class="sep">·</span><span class="mono">v1.7.2</span>
+        <a href="https://github.com/ylimecc/Bisory/releases/download/v1.7.2/Bisory-Setup-1.7.2.exe" title="Bisory-Setup-1.7.2.exe · 72 MB" data-i18n="dl1">instalador</a><span class="sep">·</span><a href="https://github.com/ylimecc/Bisory/releases/download/v1.7.2/Bisory-Portable-1.7.2.exe" title="Bisory-Portable-1.7.2.exe · 72 MB" data-i18n="dl2">versión portátil</a><span class="sep">·</span><span class="mono">v1.7.2</span>
       </p>
       <ul class="trust">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="tr1">Sin cuentas</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="tr1">Sin registro</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="tr2">Sin anuncios</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="tr3">Funciona sin internet</span></li>
       </ul>
@@ -380,9 +381,9 @@
     <div class="sec-head">
       <div>
         <span class="sec-label" data-i18n="s1label">Cómo se conecta</span>
-        <h2 data-i18n="s1title">Dos cables y listo</h2>
+        <h2 data-i18n="s1title">Solo necesitas dos cables</h2>
       </div>
-      <p data-i18n="s1p">Abre Bisory y pulsa <strong>«Conectar capturadora»</strong>. Encuentra el video y el sonido solo.</p>
+      <p data-i18n="s1p">Después, abre Bisory y selecciona <strong>«Conectar capturadora»</strong>. La imagen y el sonido se detectan automáticamente.</p>
     </div>
     <div class="chain">
       <div class="node">
@@ -397,12 +398,12 @@
       <div class="link"><b>USB</b></div>
       <div class="node me">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <span data-i18n="n3">Bisory en tu PC</span>
+        <span data-i18n="n3">Bisory en tu computadora</span>
       </div>
     </div>
     <p class="pc-note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      <span data-i18n="pcnote"><strong>¿Juegas en la PC?</strong> Usa «Grabar mi PC». No necesitas capturadora.</span>
+      <span data-i18n="pcnote"><strong>¿Juegas en la computadora?</strong> Con «Grabar mi PC» puedes grabar tus partidas sin capturadora.</span>
     </p>
   </section>
 
@@ -410,15 +411,15 @@
   <section id="funciones">
     <div class="sec-head">
       <div>
-        <span class="sec-label" data-i18n="s2label">Qué puedes hacer</span>
+        <span class="sec-label" data-i18n="s2label">Funciones</span>
         <h2 data-i18n="s2title">Todo en una ventana</h2>
       </div>
-      <p data-i18n="s2p">Sin escenas ni fuentes que configurar: conectas y juegas.</p>
+      <p data-i18n="s2p">Lo necesario para jugar y guardar tus mejores momentos, sin configuraciones complicadas.</p>
     </div>
     <div class="bento">
       <article class="tile t-replay">
         <h3 data-i18n="f1t">Replay instantáneo</h3>
-        <p data-i18n="f1p">Bisory guarda en silencio lo que va pasando. <kbd>Ctrl</kbd>+<kbd>F12</kbd> y los últimos 60 segundos quedan en un MP4.</p>
+        <p data-i18n="f1p">Bisory conserva siempre el último minuto de juego. Presiona <kbd>Ctrl</kbd>+<kbd>F12</kbd> y se guarda como video.</p>
         <div class="viz viz-replay" aria-hidden="true">
           <div class="bars" id="replayBars"></div>
           <div class="scale"><span>−60 s</span><span>−30 s</span><span data-i18n="now">ahora</span></div>
@@ -426,7 +427,7 @@
       </article>
       <article class="tile t-pc">
         <h3 data-i18n="f2t">Grabar mi PC</h3>
-        <p data-i18n="f2p">Graba tu pantalla o una ventana con el sonido del sistema, aunque Bisory esté minimizado.</p>
+        <p data-i18n="f2p">Graba tu pantalla o la ventana de un juego con todo su sonido, incluso con Bisory minimizado.</p>
         <div class="viz viz-pc" aria-hidden="true">
           <figure class="sel"><div class="thumb"></div><figcaption data-i18n="pc1">Pantalla principal</figcaption></figure>
           <figure><div class="thumb"></div><figcaption data-i18n="pc2">Tu juego</figcaption></figure>
@@ -434,20 +435,20 @@
         </div>
       </article>
       <article class="tile t-clips">
-        <h3 data-i18n="f3t">Clips y capturas</h3>
-        <p data-i18n="f3p">En MP4 y PNG, en tu carpeta de Descargas o la que elijas.</p>
+        <h3 data-i18n="f3t">Videos y capturas</h3>
+        <p data-i18n="f3p">Graba videos con Ctrl+F11 y toma capturas con F12. Se guardan en tu carpeta de Descargas o en la que prefieras.</p>
         <div class="viz viz-keys" aria-hidden="true"><kbd>Ctrl</kbd>+<kbd>F11</kbd><span>·</span><kbd>F12</kbd></div>
       </article>
       <article class="tile t-mini">
         <h3 data-i18n="f4t">Ventana mini</h3>
-        <p data-i18n="f4p">Juega en una esquina mientras haces otra cosa.</p>
+        <p data-i18n="f4p">Mantén el juego en una esquina de la pantalla mientras usas otras aplicaciones.</p>
         <div class="viz viz-mini" aria-hidden="true"></div>
       </article>
       <article class="tile t-crt">
         <div class="crt-swatch" aria-hidden="true"><span>READY</span></div>
         <div class="txt">
-          <h3 data-i18n="f5t">Tele vieja</h3>
-          <p data-i18n="f5p">Efecto CRT con scanlines para jugar como en los 90, y cuatro temas de color.</p>
+          <h3 data-i18n="f5t">Estilo retro</h3>
+          <p data-i18n="f5p">Un efecto de televisión antigua para revivir los juegos de los noventa, además de cuatro temas de color.</p>
           <div class="themes" aria-hidden="true">
             <i style="background:linear-gradient(135deg,#33B5D9 50%,#F2503F 50%)"></i><i style="background:#D8263A"></i><i style="background:#7C5CE0"></i><i style="background:#2FBF71"></i>
           </div>
@@ -455,8 +456,8 @@
       </article>
       <article class="tile t-zero">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6l-1 7 3 3H7l3-3z"/><path d="M12 13v8"/></svg>
-        <h3 data-i18n="f6t">Siempre encima</h3>
-        <p data-i18n="f6p">Fija la ventana sobre cualquier app con un clic.</p>
+        <h3 data-i18n="f6t">Siempre visible</h3>
+        <p data-i18n="f6p">Mantén Bisory por encima de las demás ventanas con un solo clic.</p>
       </article>
     </div>
   </section>
@@ -465,15 +466,15 @@
   <section id="atajos">
     <div class="sec-head">
       <div>
-        <span class="sec-label" data-i18n="s3label">Atajos</span>
-        <h2 data-i18n="s3title">Funcionan dentro del juego</h2>
+        <span class="sec-label" data-i18n="s3label">Atajos de teclado</span>
+        <h2 data-i18n="s3title">Funcionan mientras juegas</h2>
       </div>
-      <p data-i18n="s3p">No tienes que salir del juego ni buscar la ventana de Bisory.</p>
+      <p data-i18n="s3p">No necesitas salir del juego ni cambiar de ventana.</p>
     </div>
     <div class="keys">
-      <div class="key-row"><span class="caps"><kbd>Ctrl</kbd>+<kbd>F12</kbd></span><p data-i18n="k1">Guardar lo que acaba de pasar</p></div>
-      <div class="key-row"><span class="caps"><kbd>F12</kbd></span><p data-i18n="k2">Captura de pantalla</p></div>
-      <div class="key-row"><span class="caps"><kbd>Ctrl</kbd>+<kbd>F11</kbd></span><p data-i18n="k3">Grabar o detener un clip</p></div>
+      <div class="key-row"><span class="caps"><kbd>Ctrl</kbd>+<kbd>F12</kbd></span><p data-i18n="k1">Guardar el último minuto</p></div>
+      <div class="key-row"><span class="caps"><kbd>F12</kbd></span><p data-i18n="k2">Tomar una captura de pantalla</p></div>
+      <div class="key-row"><span class="caps"><kbd>Ctrl</kbd>+<kbd>F11</kbd></span><p data-i18n="k3">Iniciar o detener una grabación</p></div>
     </div>
   </section>
 
@@ -481,29 +482,29 @@
   <section id="faq">
     <div class="faq">
       <div>
-        <span class="sec-label" data-i18n="s4label">Preguntas</span>
+        <span class="sec-label" data-i18n="s4label">Preguntas frecuentes</span>
         <h2 data-i18n="s4title">Antes de descargar</h2>
       </div>
       <div class="faq-list">
         <details>
-          <summary data-i18n="q1">¿Windows muestra una advertencia al abrirlo?</summary>
-          <div class="a" data-i18n-html="a1">Solo con el instalador o el portable, porque no están firmados digitalmente. Pulsa <strong>«Más información» → «Ejecutar de todas formas»</strong>. Desde <strong>Microsoft Store</strong> no aparece ningún aviso.</div>
+          <summary data-i18n="q1">¿Windows muestra una advertencia al abrir Bisory?</summary>
+          <div class="a" data-i18n-html="a1">Solo si usas el instalador o la versión portátil, porque todavía no tienen firma digital. Para continuar, selecciona <strong>«Más información»</strong> y después <strong>«Ejecutar de todas formas»</strong>. La versión de Microsoft Store no muestra este aviso.</div>
         </details>
         <details>
           <summary data-i18n="q2">¿Qué capturadora necesito?</summary>
-          <div class="a" data-i18n-html="a2">Cualquier capturadora USB HDMI. Está probada con capturadoras económicas de chip <code>MS2130</code> a 1080p 60 fps. Si tu PC tiene USB 3.0, úsalo.</div>
+          <div class="a" data-i18n-html="a2">Cualquier capturadora USB con entrada HDMI. Bisory se probó con modelos económicos con chip <code>MS2130</code>, en Full HD a 60 cuadros por segundo. Si tu computadora tiene puertos USB 3.0 (suelen ser de color azul), conéctala en uno de ellos.</div>
         </details>
         <details>
-          <summary data-i18n="q3">¿Microsoft Store, instalador o portable?</summary>
-          <div class="a" data-i18n-html="a3"><strong>Microsoft Store</strong> (recomendado): se instala y se actualiza solo, sin avisos de Windows. <strong>Instalador</strong>: lo mismo, pero las actualizaciones las descargas tú. <strong>Portable</strong>: un solo .exe que corre desde donde lo pongas.</div>
+          <summary data-i18n="q3">¿Qué versión me conviene?</summary>
+          <div class="a" data-i18n-html="a3"><strong>Microsoft Store</strong> (recomendada): se instala y se actualiza sola, sin avisos de Windows. <strong>Instalador</strong>: funciona igual, pero las actualizaciones se descargan manualmente. <strong>Versión portátil</strong>: un solo archivo que se abre sin instalar nada, útil para llevarlo en una memoria USB.</div>
         </details>
         <details>
-          <summary data-i18n="q4">¿Dónde se guardan mis capturas y clips?</summary>
-          <div class="a" data-i18n-html="a4">En tu carpeta de <strong>Descargas</strong>. Puedes elegir otra en Ajustes → «Cambiar carpeta».</div>
+          <summary data-i18n="q4">¿Dónde se guardan mis videos y capturas?</summary>
+          <div class="a" data-i18n-html="a4">En tu carpeta de <strong>Descargas</strong>. Para usar otra, abre Ajustes y selecciona «Cambiar carpeta».</div>
         </details>
         <details>
-          <summary data-i18n="q5">¿Tiene retraso (lag)?</summary>
-          <div class="a" data-i18n-html="a5">Depende de la capturadora, no de Bisory. Con una MS2130 son unas décimas de segundo: perfecto para RPGs, plataformas o jugar casual. Para juegos de pelea competitivos, juega viendo la tele y usa Bisory para grabar.</div>
+          <summary data-i18n="q5">¿Hay retraso en la imagen?</summary>
+          <div class="a" data-i18n-html="a5">El retraso lo determina la capturadora, no Bisory. Con un modelo MS2130 es de unas décimas de segundo, suficiente para juegos de aventura, de plataformas o para jugar de forma casual. En juegos de pelea competitivos conviene jugar en la televisión y usar Bisory solo para grabar.</div>
         </details>
       </div>
     </div>
@@ -516,7 +517,7 @@
       <a href="https://github.com/ylimecc/Bisory/issues" rel="noopener" data-i18n="ft3">Reportar un problema</a>
       <a href="privacidad.html" data-i18n="ft4">Privacidad</a>
     </nav>
-    <p class="legal" data-i18n="legal">Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.</p>
+    <p class="legal" data-i18n="legal">Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de las consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.</p>
   </footer>
 </div>
 
@@ -527,75 +528,131 @@ const STRINGS = {
     navdl:"Descargar",
     eyebrow:"Para Windows · Gratis",
     h1:"Tu consola,<br><em>en tu monitor.</em>",
-    lead:'Conecta una capturadora USB y juega Switch, PlayStation o Xbox en tu PC. Sin OBS y sin configurar nada. Si pasa algo épico, <kbd>Ctrl</kbd>+<kbd>F12</kbd> guarda <strong>los últimos 60 segundos</strong>.',
-    cta:"Descargar en Microsoft Store", ctas:"Gratis · se actualiza solo",
-    alt:"Otras descargas:", dl1:"instalador", dl2:"portable",
-    tr1:"Sin cuentas", tr2:"Sin anuncios", tr3:"Funciona sin internet",
-    chip:"Capturadora · 1080p · 60 fps", now:"ahora", save:"Guardar replay", toast:"Replay guardado (60 s)",
-    s1label:"Cómo se conecta", s1title:"Dos cables y listo",
-    s1p:'Abre Bisory y pulsa <strong>«Conectar capturadora»</strong>. Encuentra el video y el sonido solo.',
-    n1:"Tu consola", n2:"Capturadora USB", n3:"Bisory en tu PC",
-    pcnote:'<strong>¿Juegas en la PC?</strong> Usa «Grabar mi PC». No necesitas capturadora.',
-    s2label:"Qué puedes hacer", s2title:"Todo en una ventana", s2p:"Sin escenas ni fuentes que configurar: conectas y juegas.",
-    f1t:"Replay instantáneo", f1p:'Bisory guarda en silencio lo que va pasando. <kbd>Ctrl</kbd>+<kbd>F12</kbd> y los últimos 60 segundos quedan en un MP4.',
-    f2t:"Grabar mi PC", f2p:"Graba tu pantalla o una ventana con el sonido del sistema, aunque Bisory esté minimizado.",
-    pc1:"Pantalla principal", pc2:"Tu juego", pc3:"Navegador",
-    f3t:"Clips y capturas", f3p:"En MP4 y PNG, en tu carpeta de Descargas o la que elijas.",
-    f4t:"Ventana mini", f4p:"Juega en una esquina mientras haces otra cosa.",
-    f5t:"Tele vieja", f5p:"Efecto CRT con scanlines para jugar como en los 90, y cuatro temas de color.",
-    f6t:"Siempre encima", f6p:"Fija la ventana sobre cualquier app con un clic.",
-    s3label:"Atajos", s3title:"Funcionan dentro del juego", s3p:"No tienes que salir del juego ni buscar la ventana de Bisory.",
-    k1:"Guardar lo que acaba de pasar", k2:"Captura de pantalla", k3:"Grabar o detener un clip",
-    s4label:"Preguntas", s4title:"Antes de descargar",
-    q1:"¿Windows muestra una advertencia al abrirlo?",
-    a1:'Solo con el instalador o el portable, porque no están firmados digitalmente. Pulsa <strong>«Más información» → «Ejecutar de todas formas»</strong>. Desde <strong>Microsoft Store</strong> no aparece ningún aviso.',
+    lead:"Juega Nintendo Switch, PlayStation o Xbox en el monitor de tu computadora con una capturadora USB. Bisory está listo en cuanto lo abres, sin programas adicionales. Y si ocurre una gran jugada, <kbd>Ctrl</kbd>+<kbd>F12</kbd> guarda <strong>el último minuto de juego</strong>.",
+    cta:"Descargar en Microsoft Store",
+    ctas:"Gratis · con actualizaciones automáticas",
+    alt:"Otras descargas:",
+    dl1:"instalador",
+    dl2:"versión portátil",
+    tr1:"Sin registro",
+    tr2:"Sin anuncios",
+    tr3:"Funciona sin internet",
+    chip:"Capturadora · 1080p · 60 fps",
+    now:"ahora",
+    save:"Guardar replay",
+    toast:"Replay guardado (60 s)",
+    s1label:"Cómo se conecta",
+    s1title:"Solo necesitas dos cables",
+    s1p:"Después, abre Bisory y selecciona <strong>«Conectar capturadora»</strong>. La imagen y el sonido se detectan automáticamente.",
+    n1:"Tu consola",
+    n2:"Capturadora USB",
+    n3:"Bisory en tu computadora",
+    pcnote:"<strong>¿Juegas en la computadora?</strong> Con «Grabar mi PC» puedes grabar tus partidas sin capturadora.",
+    s2label:"Funciones",
+    s2title:"Todo en una ventana",
+    s2p:"Lo necesario para jugar y guardar tus mejores momentos, sin configuraciones complicadas.",
+    f1t:"Replay instantáneo",
+    f1p:"Bisory conserva siempre el último minuto de juego. Presiona <kbd>Ctrl</kbd>+<kbd>F12</kbd> y se guarda como video.",
+    f2t:"Grabar mi PC",
+    f2p:"Graba tu pantalla o la ventana de un juego con todo su sonido, incluso con Bisory minimizado.",
+    pc1:"Pantalla principal",
+    pc2:"Tu juego",
+    pc3:"Navegador",
+    f3t:"Videos y capturas",
+    f3p:"Graba videos con Ctrl+F11 y toma capturas con F12. Se guardan en tu carpeta de Descargas o en la que prefieras.",
+    f4t:"Ventana mini",
+    f4p:"Mantén el juego en una esquina de la pantalla mientras usas otras aplicaciones.",
+    f5t:"Estilo retro",
+    f5p:"Un efecto de televisión antigua para revivir los juegos de los noventa, además de cuatro temas de color.",
+    f6t:"Siempre visible",
+    f6p:"Mantén Bisory por encima de las demás ventanas con un solo clic.",
+    s3label:"Atajos de teclado",
+    s3title:"Funcionan mientras juegas",
+    s3p:"No necesitas salir del juego ni cambiar de ventana.",
+    k1:"Guardar el último minuto",
+    k2:"Tomar una captura de pantalla",
+    k3:"Iniciar o detener una grabación",
+    s4label:"Preguntas frecuentes",
+    s4title:"Antes de descargar",
+    q1:"¿Windows muestra una advertencia al abrir Bisory?",
+    a1:"Solo si usas el instalador o la versión portátil, porque todavía no tienen firma digital. Para continuar, selecciona <strong>«Más información»</strong> y después <strong>«Ejecutar de todas formas»</strong>. La versión de Microsoft Store no muestra este aviso.",
     q2:"¿Qué capturadora necesito?",
-    a2:'Cualquier capturadora USB HDMI. Está probada con capturadoras económicas de chip <code>MS2130</code> a 1080p 60 fps. Si tu PC tiene USB 3.0, úsalo.',
-    q3:"¿Microsoft Store, instalador o portable?",
-    a3:'<strong>Microsoft Store</strong> (recomendado): se instala y se actualiza solo, sin avisos de Windows. <strong>Instalador</strong>: lo mismo, pero las actualizaciones las descargas tú. <strong>Portable</strong>: un solo .exe que corre desde donde lo pongas.',
-    q4:"¿Dónde se guardan mis capturas y clips?",
-    a4:'En tu carpeta de <strong>Descargas</strong>. Puedes elegir otra en Ajustes → «Cambiar carpeta».',
-    q5:"¿Tiene retraso (lag)?",
-    a5:'Depende de la capturadora, no de Bisory. Con una MS2130 son unas décimas de segundo: perfecto para RPGs, plataformas o jugar casual. Para juegos de pelea competitivos, juega viendo la tele y usa Bisory para grabar.',
-    ft1:"Todas las versiones", ft3:"Reportar un problema", ft4:"Privacidad",
-    legal:"Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.",
+    a2:"Cualquier capturadora USB con entrada HDMI. Bisory se probó con modelos económicos con chip <code>MS2130</code>, en Full HD a 60 cuadros por segundo. Si tu computadora tiene puertos USB 3.0 (suelen ser de color azul), conéctala en uno de ellos.",
+    q3:"¿Qué versión me conviene?",
+    a3:"<strong>Microsoft Store</strong> (recomendada): se instala y se actualiza sola, sin avisos de Windows. <strong>Instalador</strong>: funciona igual, pero las actualizaciones se descargan manualmente. <strong>Versión portátil</strong>: un solo archivo que se abre sin instalar nada, útil para llevarlo en una memoria USB.",
+    q4:"¿Dónde se guardan mis videos y capturas?",
+    a4:"En tu carpeta de <strong>Descargas</strong>. Para usar otra, abre Ajustes y selecciona «Cambiar carpeta».",
+    q5:"¿Hay retraso en la imagen?",
+    a5:"El retraso lo determina la capturadora, no Bisory. Con un modelo MS2130 es de unas décimas de segundo, suficiente para juegos de aventura, de plataformas o para jugar de forma casual. En juegos de pelea competitivos conviene jugar en la televisión y usar Bisory solo para grabar.",
+    ft1:"Todas las versiones",
+    ft3:"Reportar un problema",
+    ft4:"Privacidad",
+    legal:"Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de las consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.",
     title:"Bisory: tu consola en tu monitor"
   },
   en: {
     navdl:"Download",
     eyebrow:"For Windows · Free",
     h1:"Your console,<br><em>on your monitor.</em>",
-    lead:'Plug in a USB capture card and play Switch, PlayStation or Xbox on your PC. No OBS, no setup. When something epic happens, <kbd>Ctrl</kbd>+<kbd>F12</kbd> saves <strong>the last 60 seconds</strong>.',
-    cta:"Get it on Microsoft Store", ctas:"Free · updates itself",
-    alt:"Other downloads:", dl1:"installer", dl2:"portable",
-    tr1:"No account", tr2:"No ads", tr3:"Works offline",
-    chip:"Capture card · 1080p · 60 fps", now:"now", save:"Save replay", toast:"Replay saved (60 s)",
-    s1label:"How it connects", s1title:"Two cables and you're in",
-    s1p:'Open Bisory and click <strong>“Conectar capturadora”</strong> (Connect capture card). It finds the video and the sound by itself.',
-    n1:"Your console", n2:"USB capture card", n3:"Bisory on your PC",
-    pcnote:'<strong>Playing on PC?</strong> Use “Grabar mi PC” (Record my PC). No capture card needed.',
-    s2label:"What you can do", s2title:"All in one window", s2p:"No scenes or sources to set up: plug in and play.",
-    f1t:"Instant replay", f1p:'Bisory quietly keeps what just happened. Press <kbd>Ctrl</kbd>+<kbd>F12</kbd> and the last 60 seconds land in an MP4.',
-    f2t:"Record my PC", f2p:"Record your screen or a window with system audio, even with Bisory minimized.",
-    pc1:"Main screen", pc2:"Your game", pc3:"Browser",
-    f3t:"Clips & screenshots", f3p:"As MP4 and PNG, in your Downloads folder or any folder you pick.",
-    f4t:"Mini window", f4p:"Play in a corner while you do something else.",
-    f5t:"Retro TV", f5p:"A CRT scanline effect to play like it's the 90s, plus four color themes.",
-    f6t:"Always on top", f6p:"Pin the window above any app with one click.",
-    s3label:"Hotkeys", s3title:"They work inside your game", s3p:"No need to leave the game or look for the Bisory window.",
-    k1:"Save what just happened", k2:"Take a screenshot", k3:"Start or stop a clip",
-    s4label:"Questions", s4title:"Before you download",
-    q1:"Does Windows show a warning when I open it?",
-    a1:'Only with the installer or the portable version, because they are not code-signed. Click <strong>“More info” → “Run anyway”</strong>. The <strong>Microsoft Store</strong> version shows no warning.',
+    lead:"Play Nintendo Switch, PlayStation or Xbox on your computer monitor with a USB capture card. Bisory is ready as soon as you open it, with no extra software. And when a great play happens, <kbd>Ctrl</kbd>+<kbd>F12</kbd> saves <strong>the last minute of gameplay</strong>.",
+    cta:"Get it on Microsoft Store",
+    ctas:"Free · automatic updates",
+    alt:"Other downloads:",
+    dl1:"installer",
+    dl2:"portable version",
+    tr1:"No sign-up",
+    tr2:"No ads",
+    tr3:"Works offline",
+    chip:"Capture card · 1080p · 60 fps",
+    now:"now",
+    save:"Save replay",
+    toast:"Replay saved (60 s)",
+    s1label:"How it connects",
+    s1title:"All you need is two cables",
+    s1p:"Then open Bisory and select <strong>“Conectar capturadora”</strong> (Connect capture card). The picture and sound are detected automatically.",
+    n1:"Your console",
+    n2:"USB capture card",
+    n3:"Bisory on your computer",
+    pcnote:"<strong>Playing on your computer?</strong> With “Grabar mi PC” (Record my PC) you can record your games without a capture card.",
+    s2label:"Features",
+    s2title:"Everything in one window",
+    s2p:"What you need to play and keep your best moments, without complicated settings.",
+    f1t:"Instant replay",
+    f1p:"Bisory always keeps the last minute of gameplay. Press <kbd>Ctrl</kbd>+<kbd>F12</kbd> and it is saved as a video.",
+    f2t:"Record my PC",
+    f2p:"Record your screen or a game window with all its sound, even with Bisory minimized.",
+    pc1:"Main screen",
+    pc2:"Your game",
+    pc3:"Browser",
+    f3t:"Videos and screenshots",
+    f3p:"Record videos with Ctrl+F11 and take screenshots with F12. They are saved to your Downloads folder or any folder you choose.",
+    f4t:"Mini window",
+    f4p:"Keep the game in a corner of the screen while you use other apps.",
+    f5t:"Retro style",
+    f5p:"An old-TV effect to relive the games of the nineties, plus four color themes.",
+    f6t:"Always visible",
+    f6p:"Keep Bisory above all other windows with a single click.",
+    s3label:"Keyboard shortcuts",
+    s3title:"They work while you play",
+    s3p:"There is no need to leave the game or switch windows.",
+    k1:"Save the last minute",
+    k2:"Take a screenshot",
+    k3:"Start or stop a recording",
+    s4label:"Frequently asked questions",
+    s4title:"Before you download",
+    q1:"Does Windows show a warning when I open Bisory?",
+    a1:"Only with the installer or the portable version, because they do not have a digital signature yet. To continue, select <strong>“More info”</strong> and then <strong>“Run anyway”</strong>. The Microsoft Store version does not show this warning.",
     q2:"Which capture card do I need?",
-    a2:'Any USB HDMI capture card. Tested with cheap <code>MS2130</code>-chip cards at 1080p 60 fps. Use a USB 3.0 port if your PC has one.',
-    q3:"Microsoft Store, installer or portable?",
-    a3:'<strong>Microsoft Store</strong> (recommended): installs and updates itself, with no Windows warnings. <strong>Installer</strong>: the same, but you download updates yourself. <strong>Portable</strong>: a single .exe that runs from anywhere.',
-    q4:"Where are my screenshots and clips saved?",
-    a4:'In your <strong>Downloads</strong> folder. You can pick another one in Ajustes → “Cambiar carpeta” (the app is in Spanish).',
-    q5:"Is there any lag?",
-    a5:'It depends on the capture card, not on Bisory. With an MS2130 it\'s a few tenths of a second: great for RPGs, platformers or casual play. For competitive fighting games, play on the TV and use Bisory to record.',
-    ft1:"All releases", ft3:"Report an issue", ft4:"Privacy",
+    a2:"Any USB capture card with an HDMI input. Bisory was tested with affordable models using the <code>MS2130</code> chip, in Full HD at 60 frames per second. If your computer has USB 3.0 ports (they are usually blue), plug it into one of them.",
+    q3:"Which version should I choose?",
+    a3:"<strong>Microsoft Store</strong> (recommended): installs and updates itself, with no Windows warnings. <strong>Installer</strong>: works the same, but you download updates manually. <strong>Portable version</strong>: a single file that opens without installing anything, handy to carry on a USB drive.",
+    q4:"Where are my videos and screenshots saved?",
+    a4:"In your <strong>Downloads</strong> folder. To use another one, open Ajustes (Settings) and select “Cambiar carpeta” (Change folder). The app is in Spanish.",
+    q5:"Is there any delay in the picture?",
+    a5:"The delay depends on the capture card, not on Bisory. With an MS2130 model it is a few tenths of a second, which is fine for adventure games, platformers or casual play. For competitive fighting games, it is better to play on the TV and use Bisory only to record.",
+    ft1:"All releases",
+    ft3:"Report an issue",
+    ft4:"Privacy",
     legal:"Bisory is not affiliated with Nintendo, Sony or Microsoft. Console names are trademarks of their respective owners and are mentioned solely to indicate compatibility.",
     title:"Bisory: your console on your monitor"
   }
