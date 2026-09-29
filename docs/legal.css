@@ -1,0 +1,104 @@
+/* Estilo de las páginas legales (privacidad y términos): mismos tokens y letras que la portada.
+   Cada texto está en los dos idiomas; el lang de <html> decide cuál se ve (sin JS: español). */
+:root{
+  --bg:#0B0E14;
+  --panel:#121722;
+  --panel-2:#171D2A;
+  --line:#232B3A;
+  --line-2:#303B50;
+  --text:#E8EDF4;
+  --muted:#8C98AB;
+  --faint:#748096;
+  --blue:#33B5D9;
+  --blue-ink:#04222C;
+  --rec:#F2503F;
+  --font-display:"Big Shoulders Display","Arial Narrow",sans-serif;
+  --font-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"Geist Mono",ui-monospace,Consolas,monospace;
+  --font-pixel:"Press Start 2P",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:var(--font-body);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--blue);color:var(--blue-ink)}
+a{color:var(--blue);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+html[lang="es"] [lang="en"], html[lang="en"] [lang="es"]{display:none}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* barra superior (igual que la portada) */
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0}
+.brand{
+  font-family:var(--font-pixel);font-size:11px;letter-spacing:1px;
+  color:var(--text);text-decoration:none;display:flex;align-items:center;gap:10px;
+}
+.brand .dot-l,.brand .dot-r{width:10px;height:10px;border-radius:50%}
+.brand .dot-l{background:var(--blue)}
+.brand .dot-r{background:var(--rec)}
+.top-actions{display:flex;align-items:center;gap:8px}
+.top-link,.lang-btn{
+  font-family:var(--font-body);font-weight:500;font-size:14px;
+  color:var(--muted);background:none;border:1px solid transparent;
+  border-radius:8px;padding:7px 12px;cursor:pointer;text-decoration:none;
+  transition:color .2s,border-color .2s;
+}
+.top-link:hover,.lang-btn:hover{color:var(--text)}
+.lang-btn{border-color:var(--line)}
+.top-cta{color:var(--blue);border-color:rgba(51,181,217,.45)}
+.top-cta:hover{color:var(--text);border-color:var(--blue)}
+
+/* documento */
+main{max-width:760px;padding:40px 0 88px}
+.eyebrow{
+  font-family:var(--font-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+h1{
+  font-family:var(--font-display);font-weight:800;text-transform:uppercase;
+  font-size:clamp(40px,5vw,60px);line-height:.95;letter-spacing:.005em;
+}
+.updated{font-family:var(--font-mono);font-size:13px;color:var(--faint);margin-top:14px}
+.tldr{
+  margin:32px 0 12px;padding:18px 22px;
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:10px;
+}
+.tldr p{color:var(--text);font-size:16.5px;margin:0}
+h2{
+  font-family:var(--font-display);font-weight:800;text-transform:uppercase;
+  font-size:26px;line-height:1.05;letter-spacing:.01em;margin:48px 0 14px;
+}
+article p{color:var(--muted);margin-bottom:12px}
+article strong{color:var(--text);font-weight:500}
+article ul{list-style:none;display:grid;gap:10px;margin-bottom:12px}
+article li{color:var(--muted);padding-left:20px;position:relative}
+article li::before{content:"";position:absolute;left:2px;top:.66em;width:6px;height:6px;background:var(--blue)}
+code{font-family:var(--font-mono);background:var(--panel-2);padding:1px 6px;border-radius:5px;font-size:13.5px;color:var(--text)}
+kbd{
+  font-family:var(--font-mono);font-size:13px;font-weight:500;
+  background:var(--panel-2);border:1px solid var(--line-2);border-bottom-width:2px;
+  border-radius:5px;padding:0 6px;color:var(--text);white-space:nowrap;
+}
+
+/* pie (igual que la portada) */
+footer{
+  border-top:1px solid var(--line);padding:34px 0 46px;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  color:var(--muted);font-size:14px;
+}
+footer .f-brand{font-family:var(--font-pixel);font-size:9px;letter-spacing:1px}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--text)}
+footer a[aria-current="page"]{color:var(--text)}
+
+@media (max-width:680px){
+  .wrap{padding:0 16px}
+  .top-link.gh{display:none}
+  main{padding-top:20px}
+  .tldr{padding:16px 18px}
+}

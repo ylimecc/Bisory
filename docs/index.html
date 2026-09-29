@@ -7,9 +7,9 @@
 <meta name="description" content="Bisory es un visor de capturadora gratuito para Windows. Juega tu consola en el monitor de tu computadora, guarda el último minuto de juego con una tecla y graba tus partidas de PC. Disponible en Microsoft Store.">
 <meta name="theme-color" content="#0B0E14">
 <link rel="icon" href="icon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/big-shoulders-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
   /* ---------- tokens ----------
      Azul = acciones. Rojo = solo "en vivo" y grabando. Los dos juntos = la marca (los puntos del logo). */
@@ -516,6 +516,7 @@
       <a href="https://github.com/ylimecc/Bisory/releases" rel="noopener" data-i18n="ft1">Todas las versiones</a>
       <a href="https://github.com/ylimecc/Bisory/issues" rel="noopener" data-i18n="ft3">Reportar un problema</a>
       <a href="privacidad.html" data-i18n="ft4">Privacidad</a>
+      <a href="terminos.html" data-i18n="ft5">Términos</a>
     </nav>
     <p class="legal" data-i18n="legal">Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de las consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.</p>
   </footer>
@@ -587,6 +588,7 @@ const STRINGS = {
     ft1:"Todas las versiones",
     ft3:"Reportar un problema",
     ft4:"Privacidad",
+    ft5:"Términos",
     legal:"Bisory no está afiliado a Nintendo, Sony ni Microsoft. Los nombres de las consolas son marcas de sus respectivos titulares y se mencionan únicamente para indicar compatibilidad.",
     title:"Bisory: tu consola en tu monitor"
   },
@@ -653,6 +655,7 @@ const STRINGS = {
     ft1:"All releases",
     ft3:"Report an issue",
     ft4:"Privacy",
+    ft5:"Terms",
     legal:"Bisory is not affiliated with Nintendo, Sony or Microsoft. Console names are trademarks of their respective owners and are mentioned solely to indicate compatibility.",
     title:"Bisory: your console on your monitor"
   }

@@ -19,29 +19,28 @@
   <meta name="description" content="Página no encontrada, pero Benny necesita quien lo acompañe.">
   <meta name="robots" content="noindex">
   <title>404 · Bisory</title>
-  <meta name="theme-color" content="#0A0C12">
+  <meta name="theme-color" content="#0B0E14">
   <link rel="icon" href="icon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/fonts.css">
 
   <style>
-    /* mismos tokens que index.html. Todo va en línea porque el service worker guarda
-       esta página como un solo archivo para mostrarla sin conexión. */
+    /* mismos tokens que index.html. El estilo va en línea porque el service worker guarda
+       esta página como un solo archivo para mostrarla sin conexión (sin conexión, las letras
+       caen a las del sistema). */
     :root{
-      --bg:#0A0C12;
-      --surface:#12151D;
-      --surface-2:#181C27;
-      --border:#232936;
-      --text:#EAF0F7;
-      --muted:#93A0B4;
-      --blue:#0AB9E6;
-      --red:#FF3C28;
-      --blue-dim:rgba(10,185,230,.14);
+      --bg:#0B0E14;
+      --surface:#121722;
+      --surface-2:#171D2A;
+      --border:#232B3A;
+      --text:#E8EDF4;
+      --muted:#8C98AB;
+      --blue:#33B5D9;
+      --red:#F2503F;
+      --blue-dim:rgba(51,181,217,.14);
       --radius:14px;
-      --font-display:"Chakra Petch",system-ui,sans-serif;
+      --font-display:"Big Shoulders Display","Arial Narrow",sans-serif;
       --font-pixel:"Press Start 2P",monospace;
-      --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      --font-body:"Geist",system-ui,-apple-system,"Segoe UI",sans-serif;
     }
     *{margin:0;padding:0;box-sizing:border-box}
     body{
@@ -95,9 +94,9 @@
       box-shadow:0 30px 80px -20px rgba(0,0,0,.7), 0 0 120px -30px rgba(10,185,230,.25);
     }
     canvas{display:block;width:100%;height:auto;image-rendering:pixelated;border-radius:8px;touch-action:manipulation}
-    .hint{font-family:var(--font-display);font-size:12.5px;color:var(--muted);margin:10px 0 4px;user-select:none}
+    .hint{font-family:var(--font-body);font-size:12.5px;color:var(--muted);margin:10px 0 4px;user-select:none}
     kbd{
-      font-family:var(--font-display);font-size:11.5px;font-weight:600;
+      font-family:var(--font-body);font-size:11.5px;font-weight:600;
       background:var(--surface-2);border:1px solid var(--border);
       border-bottom-width:2px;border-radius:5px;padding:0 6px;
       color:var(--text);white-space:nowrap;
@@ -110,9 +109,9 @@
 
     .back{
       align-self:center;margin-top:28px;
-      font-family:var(--font-display);font-weight:700;font-size:16px;
+      font-family:var(--font-body);font-weight:600;font-size:16px;
       color:var(--blue);text-decoration:none;
-      background:var(--blue-dim);border:1px solid rgba(10,185,230,.45);
+      background:var(--blue-dim);border:1px solid rgba(51,181,217,.45);
       border-radius:var(--radius);padding:12px 24px;
       transition:transform .18s ease,box-shadow .18s ease;
     }
